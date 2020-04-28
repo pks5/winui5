@@ -1,0 +1,57 @@
+.winui5IteConBas{
+    position:relative;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+.winui5IteConBas,
+.winui5IteConBas *{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+
+
+.winui5IteConBas-items,
+.winui5Item-items{
+    list-style:none;
+    
+    padding:0;
+    margin:0;
+    
+    box-sizing: border-box;
+}
+
+.winui5IteConBas-selection{
+    position: fixed;
+    width:auto;
+    height:auto;
+    
+    z-index: 5;
+    display:none;
+    pointer-events:none;
+    box-sizing: border-box;
+    
+    border: 1px solid @winui5Col-mouSel;
+    background-color: fade(@winui5Col-mouSel, 25%);
+}
+
+.winui5IteConBas-flg-Selecting *{
+    //cursor : default !important;
+}
+
+.winui5IteConBas:focus{
+   outline:none;
+}
+
+.sap-desktop{
+    .winui5IteConBas:focus{
+        -moz-box-shadow:    inset 0 0 2px @winui5Col-act;
+        -webkit-box-shadow: inset 0 0 2px @winui5Col-act;
+        box-shadow:         inset 0 0 2px @winui5Col-act;
+    }
+}
+    

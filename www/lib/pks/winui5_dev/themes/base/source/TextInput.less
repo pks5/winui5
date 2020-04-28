@@ -1,0 +1,67 @@
+.winui5TexInp{
+    
+    display:inline-flex;
+    align-items: center;
+    vertical-align:top;
+    
+    height: @winui5-refMD;
+    
+    
+    background-color:white;
+    border:solid 1px #cccccc;
+    
+    box-sizing: border-box;
+}
+
+.winui5TexInp-contentBefore,
+.winui5TexInp-contentInput,
+.winui5TexInp-contentAfter{
+    display:inline-block;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.winui5TexInp-input{
+    border:none;
+    display:block;
+    height:100%;
+    width:100%;
+    box-sizing: border-box;
+    
+    
+    font-size: 1rem;
+}
+
+.winui5TexInp-input:focus{
+    outline:none;
+ }
+
+.winui5TexInp-contentInput{
+    flex-basis: 100%;
+}
+
+.winui5TexInp-contentInput:first-child{
+    padding-left: @winui5-spaMD;
+}
+
+.winui5TexInp-contentInput:last-child{
+    padding-right: @winui5-spaMD;
+}
+
+/*
+* START TextInput within Form Field
+*/
+
+.winui5TexInp-opt-FormField{
+    border:none;
+    display: flex;
+}
+
+.winui5TexInp-opt-FormField .winui5TexInp-contentInput{
+    padding-left:0;
+    padding-right:0;
+}
+
+/*
+* END TextInput within Form Field
+*/

@@ -1,0 +1,8 @@
+{
+	"server" : {
+	        "name" : "WinUi5 Dev Server",
+	        "port" : 8484,
+	        "pathToPublic" : "../www"
+	}
+
+}

@@ -1,0 +1,202 @@
+/*
+* START XS
+*/
+
+/*
+* XS Tiles, Items and Details
+*/
+.winui5ObjLis-viewMode-SmallTiles,
+.winui5ObjLis-viewMode-SmallItems,
+.winui5ObjLis-viewMode-Details,
+.winui5ObjTre-viewMode-SmallItems{
+    /*
+    * START modify itemContent
+    */
+    .winui5FileItem > .winui5Item-item .winui5Item-itemContent{
+        //-itemContent with file icon
+        padding-left: (0.8 * @winui5-refXS + 2 * @winui5-spaXS); //For small icon wihout checkbox
+    }
+    
+    &.winui5IteConBas-flg-Checkbox .winui5FileItem > .winui5Item-item .winui5Item-itemContent{
+        //-itemContent with checkbox and file icon
+        padding-left: (@winui5-cheBoxSiz + 0.8 * @winui5-refXS + 3 * @winui5-spaXS);
+    }
+    /*
+    * END modify itemContent
+    */
+
+    .winui5FileItem-icon{
+        left: @winui5-spaXS;
+        height: (0.8 * @winui5-refXS);
+        width: (0.8 * @winui5-refXS);
+        margin-top: (-0.4 * @winui5-refXS);
+    }
+    
+    &.winui5IteConBas-flg-Checkbox .winui5FileItem-icon{ 
+        left: (@winui5-cheBoxSiz + 2*@winui5-spaXS);
+    }
+    
+    .winui5FileItem-name,
+    .winui5FileItem-flg-WithDescription > .winui5Item-item .winui5FileItem-name{
+        font-size: @winui5-fonXS;
+        line-height: @winui5-refInnXS;
+    }
+    
+    .winui5FileItem-description,
+    .winui5FileItem-flg-WithDescription > .winui5Item-item .winui5FileItem-description{
+        display:none;
+    }
+}
+
+/*
+* Details
+*/
+.winui5ObjLis-viewMode-Details{
+    .winui5FileItem-name{
+       width:35%;
+       display:inline-block;
+    }
+    
+    .winui5FileItem-description,
+    .winui5FileItem-value,
+    .winui5FileItem-valueDate{
+       
+       display:inline-block !important;
+       margin:0;
+       font-size:0.875rem;
+       line-height:16px;
+       padding-left: 6px;
+    }
+    
+    .winui5FileItem-description{
+        width:25%;
+    }
+    
+    .winui5FileItem-value{
+        width:15%;
+        text-align:right;
+     }
+     
+     .winui5FileItem-valueDate{
+        width:25%;
+    }
+}
+
+/*
+* END XS
+*/
+
+/*
+* START MD & XL
+*/
+
+/*
+* MD Tiles and Items
+*/
+.winui5ObjLis-viewMode-MediumTiles,
+.winui5ObjLis-viewMode-MediumItems,
+.winui5ObjTre-viewMode-MediumItems{ 
+    /*
+    * START modify itemContent
+    */
+    .winui5FileItem > .winui5Item-item .winui5Item-itemContent{
+        //-itemContent with file icon
+        padding-left: (0.8 * @winui5-refMD + 2 * @winui5-spaMD);
+    }
+    /*
+    * END modify itemContent
+    */
+    
+    .winui5FileItem-icon{
+        left: @winui5-spaMD;
+        height: (0.8 * @winui5-refMD);
+        width: (0.8 * @winui5-refMD);
+        margin-top: (-0.4 * @winui5-refMD);
+    }
+    
+    .winui5FileItem-name{
+        font-size: @winui5-fonMD;
+        line-height: @winui5-refMD - 2*@winui5-borSiz;
+    }
+    
+    .winui5FileItem-description{
+        margin-top:3px;
+        font-size:0.75rem;
+        line-height: 1.1;
+    }
+    
+    .winui5FileItem-flg-WithDescription > .winui5Item-item{
+        & .winui5FileItem-name{
+            margin-top:4px;
+            font-size: 0.875rem;
+            line-height: 1.1;
+        }
+    }
+}
+
+/*
+* MD & XL Icons
+*/
+.winui5ObjLis-viewMode-MediumIcons,
+.winui5ObjLis-viewMode-LargeIcons{
+    .winui5FileItem-icon{
+        position: static;
+        display: inline-block;
+        
+        top: auto;
+        left: auto;
+        
+        margin: 0;
+    }
+    
+    .winui5FileItem-name,
+    .winui5FileItem-flg-WithDescription > .winui5Item-item .winui5FileItem-name{
+        word-wrap: break-word;
+        overflow: hidden;
+        white-space: normal;
+        text-overflow: ellipsis;
+    }
+    
+    .winui5FileItem-description,
+    .winui5FileItem-flg-WithDescription > .winui5Item-item .winui5FileItem-description{
+        display:none;
+    }
+}
+
+/*
+* MD Icons
+*/
+.winui5ObjLis-viewMode-MediumIcons{
+    .winui5FileItem-icon{
+        height: (0.8 * @winui5-refMD);
+        width: (0.8 * @winui5-refMD);
+    }
+    
+    .winui5FileItem-name,
+    .winui5FileItem-flg-WithDescription > .winui5Item-item .winui5FileItem-name{
+       max-height: 3.5rem;
+       font-size: 0.75rem;
+       line-height: 0.875rem;
+    }
+}
+
+/*
+* XL Icons
+*/
+.winui5ObjLis-viewMode-LargeIcons{
+    .winui5FileItem-icon{
+        height: (0.8 * @winui5-refXL);
+        width: (0.8 * @winui5-refXL);
+    }
+    
+    .winui5FileItem-name,
+    .winui5FileItem-flg-WithDescription > .winui5Item-item .winui5FileItem-name{
+       max-height: 4rem;
+       font-size: 0.875rem;
+       line-height: 1rem;
+    }
+}
+
+/*
+* END MD & XL
+*/

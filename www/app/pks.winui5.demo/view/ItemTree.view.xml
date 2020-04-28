@@ -1,0 +1,23 @@
+<mvc:View controllerName="pks.winui5.demo.fiori.controller.ItemTree"
+	xmlns="sap.m" xmlns:winui5="pks.winui5" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+	<Page title="{i18n>itemTreeHeading}">
+		<headerContent>
+
+		</headerContent>
+		<content>
+
+			<winui5:ObjectTree id="fileTreeSmallItemsSingleSelection"
+				scrollX="Scroll" selectionChange=".onSelectionChange" press=".onPress"
+				items="{FILES>/files}" selectionMode="Single" viewMode="SmallItems"
+				width="320px" height="480px">
+				
+				<winui5:FileItem name="{FILES>fileName}"
+					description="{FILES>fileType}" enabled="{= !${FILES>disabled}}"
+					selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+
+			</winui5:ObjectTree>
+
+		</content>
+	</Page>
+</mvc:View>

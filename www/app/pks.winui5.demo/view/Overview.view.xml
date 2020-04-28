@@ -1,0 +1,22 @@
+<mvc:View controllerName="pks.winui5.demo.fiori.controller.Overview" xmlns="sap.m"
+	xmlns:winui5="pks.winui5" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+	>
+	<Page title="{i18n>homePageTitle}">
+		<headerContent>
+
+		</headerContent>
+		<content>
+			
+	           <winui5:ObjectList press=".onPress" viewMode="LargeIcons"
+                    width="384px" height="220px">
+                    
+                    <winui5:FileItem hidden="false" name="{i18n>selectionModesHeading}" data:route="selectionModes"></winui5:FileItem>
+                    <winui5:FileItem name="{i18n>itemTreeHeading}" data:route="itemTree"></winui5:FileItem>
+                    <winui5:FileItem name="{i18n>fileExplorerHeading}" data:route="fileExplorer"></winui5:FileItem>
+                    
+                </winui5:ObjectList>
+   
+		</content>
+	</Page>
+</mvc:View>

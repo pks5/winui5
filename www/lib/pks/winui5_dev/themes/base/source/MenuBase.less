@@ -1,0 +1,37 @@
+/*
+* START Sizes
+*/
+
+.winui5MenBas_size(@dialogSize){
+    @ref: "winui5-ref@{dialogSize}";
+    @spa: "winui5-spa@{dialogSize}";
+    @fon: "winui5-fon@{dialogSize}";
+    
+    .winui5MenBas{
+        &.winui5IteConBas-siz-@{dialogSize},
+        .sapUiMedia-Std-Phone &.winui5IteConBas-sizPho-@{dialogSize},
+        .sapUiMedia-Std-Tablet &.winui5IteConBas-sizTab-@{dialogSize},
+        .sapUiMedia-Std-Desktop &.winui5IteConBas-sizDes-@{dialogSize}{
+            .winui5Item-item{
+                height: @@ref;
+                font-size: @@fon;
+            }
+            
+            .winui5Item-itemContent{
+               padding:0 @@spa;
+               //line-height: @@ref - 2*@winui5-borSiz;
+            }
+         }
+     }
+}
+
+.winui5MenBas_size(~"XS");
+.winui5MenBas_size(~"SM");
+.winui5MenBas_size(~"MD");
+.winui5MenBas_size(~"LG");
+.winui5MenBas_size(~"XL");
+
+
+/*
+* END Sizes
+*/

@@ -1,0 +1,134 @@
+/*
+* START Layout
+*/
+
+.winui5ButMen{
+    display:inline-block;
+    vertical-align:top;
+    
+    .winui5IteConBas-items{
+        position:relative;
+    }
+    
+    .winui5Item-itemContent{
+        display: flex;    
+        align-items: center;
+    }
+}
+
+.winui5ButMenIte{
+    width:auto;
+    display:inline-block;
+    vertical-align:top;
+}
+
+.winui5ButMenIte-ico{
+    display:inline-block;
+    height: 1.2em;
+    font-size: 1.2em;
+}
+
+.winui5ButMenIte-ico > img{
+    width:auto;
+    height: 1.2em;
+}
+
+.winui5ButMenIte-ico,
+.winui5ButMenIte-tex{
+    box-sizing: border-box;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.winui5ButMenIte-ico:first-child,
+.winui5ButMenIte-tex:first-child{
+    margin-left:0!important;
+}
+
+/*
+* END Layout
+*/
+
+/*
+* START Colors
+*/
+
+.winui5ButMen{
+    
+    .winui5Item-flg-Selected > .winui5Item-item > .winui5Item-itemContent{
+        color: @winui5Men-colSel;
+        
+        border-bottom-color: @winui5Men-colSel;
+        
+        -webkit-box-shadow: inset 0 -0.0625rem 0 0 @winui5Men-colSel;
+        -moz-box-shadow: inset 0 -0.0625rem 0 0 @winui5Men-colSel;
+        box-shadow: inset 0 -0.0625rem 0 0 @winui5Men-colSel;
+    }
+}
+
+/*
+* END Colors
+*/
+
+/*
+* START Sizes
+*/
+
+.winui5ButMen_size(@dialogSize){
+    @ref: "winui5-ref@{dialogSize}";
+    @spa: "winui5-spa@{dialogSize}";
+    @fon: "winui5-fon@{dialogSize}";
+    
+    .winui5ButMen{
+        &.winui5IteConBas-siz-@{dialogSize},
+        .sapUiMedia-Std-Phone &.winui5IteConBas-sizPho-@{dialogSize},
+        .sapUiMedia-Std-Tablet &.winui5IteConBas-sizTab-@{dialogSize},
+        .sapUiMedia-Std-Desktop &.winui5IteConBas-sizDes-@{dialogSize}{
+            .winui5ButMenIte-ico,
+            .winui5ButMenIte-tex{
+                margin-left: @@spa;
+            }
+         }
+     }
+}
+
+.winui5ButMen_size(~"XS");
+.winui5ButMen_size(~"SM");
+.winui5ButMen_size(~"MD");
+.winui5ButMen_size(~"LG");
+.winui5ButMen_size(~"XL");
+
+
+/*
+* END Sizes
+*/
+
+/*
+* START Device Specific
+*/
+
+//Desktop
+.sap-desktop{ 
+    .winui5ButMen{
+        .winui5Item-enabled-True > .winui5Item-item:hover > .winui5Item-itemContent{
+            background-color: @winui5Men-colHov;
+        }
+        
+        .winui5Item-flg-Selected > .winui5Item-item:hover > .winui5Item-itemContent{
+            border-bottom-color: @winui5Men-colHovSel;
+            color: @winui5Men-colHovSel;
+            background-color:transparent;
+        }
+    }
+    
+    .winui5ButMen:focus{
+        .winui5Item-flg-Active > .winui5Item-item > .winui5Item-itemContent{
+            //TODO
+            border-color: white;
+        }
+    }
+}
+
+/*
+* END Device Specific
+*/

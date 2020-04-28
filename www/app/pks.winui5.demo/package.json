@@ -1,0 +1,8 @@
+{
+  "name": "winui5-demo",
+  "version": "0.1.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  }
+}

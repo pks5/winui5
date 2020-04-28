@@ -1,0 +1,150 @@
+/*
+* START Layout
+*/
+
+.winui5DroMen{ 
+    .winui5IteConBas-items{
+        position:relative;
+    }
+    
+    .winui5Item-items{
+        position:fixed;
+        display:none;
+    }
+    
+    .winui5IteConBas-items,
+    .winui5Item-items{
+        border: solid 1px @winui5-colSep;
+    }
+    
+    .winui5Item-flg-Expanded > .winui5Item-items{
+        display:block;
+    }
+    
+    .winui5Item-itemContent{
+        display: flex;    
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .winui5Item-checkbox{
+        //margin-left: @winui5-spaMD;
+        display:inline-block;
+    }
+    
+    .winui5Item-checkboxFrame{
+        height: @winui5-cheBoxSiz;
+        width: @winui5-cheBoxSiz;
+    }
+    
+    .winui5Item-checkboxMark{
+       font-size: @winui5-cheBoxFon;
+       line-height: (@winui5-cheBoxSiz - 2*@winui5-cheBoxBor);
+    }
+    
+    
+    .winui5Item-expandIcon{
+        font-size: @winui5-fonMD;
+        display:inline-block;
+        position: relative;
+        margin-left: @winui5-spaMD;
+    }
+}
+
+.winui5DroMenIte-first,
+.winui5DroMenIte-last{
+    display: inline-flex;    
+    align-items: center;
+}
+
+.winui5DroMenIte-icon{
+    display: inline-block;
+    font-size: 1.2em;
+    height: 1.2em;
+}
+
+.winui5DroMenIte-icon > img{
+    width: auto;
+    height: 1.2em;
+}
+
+.winui5DroMenIte-text{
+    display: inline-block;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+.winui5DroMenIte-additionalText{
+    display: inline-block;
+    text-align: right;
+    
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+.winui5DroMenIte-icon,
+.winui5DroMenIte-text,
+.winui5DroMenIte-additionalText,
+.winui5DroMenIte .winui5Item-expandIcon{
+    margin-left: @winui5-spaMD;
+}
+
+.winui5DroMenIte-icon:first-child,
+.winui5DroMenIte-text:first-child{
+    margin-left:0!important;
+}
+
+.winui5DroMenIte-last{
+    margin-left:20px;
+}
+
+/*
+* END Layout
+*/
+
+/*
+* START Colors
+*/
+
+.winui5DroMen{ 
+    .winui5IteConBas-items,
+    .winui5Item-items{
+        background-color: @winui5-colTooBar;
+        //border: solid 1px @winui5-colSep;
+    }
+}
+
+.winui5DroMenIte-additionalText{
+    color: @winui5Col-addTex;
+}
+
+/*
+* END Colors
+*/
+
+/*
+* Desktop only
+*/
+.sap-desktop{ 
+    .winui5DroMen{ 
+        .winui5Item-enabled-True > .winui5Item-item:hover > .winui5Item-itemContent{
+            border-top-color: darken(@winui5Men-colHov, 1%);
+            border-bottom-color: darken(@winui5Men-colHov, 1%);
+            background-color: @winui5Men-colHov;
+        }
+    }
+    
+    .winui5DroMen:focus{ 
+        .winui5IteConBas-items,
+        .winui5Item-items{
+            //TOOD
+            border-color:blue;
+        }  
+        
+        .winui5Item-flg-Active > .winui5Item-item > .winui5Item-itemContent{
+            border-style:dotted;
+            border-color:@winui5Men-colHov;
+        }
+    }
+
+}

@@ -1,0 +1,269 @@
+/*
+* Size independant
+*/
+.winui5ObjLis-viewMode-SmallTiles,
+.winui5ObjLis-viewMode-SmallItems,
+.winui5ObjLis-viewMode-Details,
+.winui5ObjTre-viewMode-SmallItems,
+.winui5ObjLis-viewMode-MediumTiles,
+.winui5ObjLis-viewMode-MediumItems,
+.winui5ObjTre-viewMode-MediumItems,
+.winui5ObjLis-viewMode-MediumIcons,
+.winui5ObjLis-viewMode-LargeIcons{ 
+    .winui5Item{
+        //TODO margin between items
+        padding-bottom:1px;
+    }
+}    
+    
+/*
+* XS & MD Tiles
+* Size Independant
+*/
+.winui5ObjLis-viewMode-SmallTiles,
+.winui5ObjLis-viewMode-MediumTiles{
+    .winui5Item{
+        display:inline-block;
+        vertical-align:top;
+        //TODO margin between items
+        padding-right:1px;
+    }
+    
+    .winui5Item-item{
+        display:block;
+        width:100%;
+     }
+}
+
+/*
+* Details
+* Size independant
+*/
+.winui5ObjLis-viewMode-Details{
+    .winui5Item-item{
+        display:block;
+        width: 100%;
+    }
+}
+
+/*
+* MD & XL Icons
+* Size independant
+*/
+.winui5ObjLis-viewMode-MediumIcons,
+.winui5ObjLis-viewMode-LargeIcons{
+    .winui5Item{
+        display:inline-block;
+        vertical-align:top;
+        height:auto;
+        
+        //TODO margin
+        padding-right:1px;
+    }
+    
+    .winui5Item-item{
+        display:block;
+        width:100%;
+        height:100%;
+        text-align:center;
+    }
+}
+
+ 
+  //XS New
+  .winui5ObjLis.winui5IteConBas-siz-XS,
+   .sapUiMedia-Std-Phone .winui5ObjLis.winui5IteConBas-sizPho-XS,
+   .sapUiMedia-Std-Tablet .winui5ObjLis.winui5IteConBas-sizTab-XS,
+   .sapUiMedia-Std-Desktop .winui5ObjLis.winui5IteConBas-sizDes-XS,
+   .winui5ObjTre.winui5IteConBas-siz-XS,
+   .sapUiMedia-Std-Phone .winui5ObjTre.winui5IteConBas-sizPho-XS,
+   .sapUiMedia-Std-Tablet .winui5ObjTre.winui5IteConBas-sizTab-XS,
+   .sapUiMedia-Std-Desktop .winui5ObjTre.winui5IteConBas-sizDes-XS{
+        
+   }
+   
+   //MD New
+  .winui5ObjLis.winui5IteConBas-siz-MD,
+   .sapUiMedia-Std-Phone .winui5ObjLis.winui5IteConBas-sizPho-MD,
+   .sapUiMedia-Std-Tablet .winui5ObjLis.winui5IteConBas-sizTab-MD,
+   .sapUiMedia-Std-Desktop .winui5ObjLis.winui5IteConBas-sizDes-MD,
+   .winui5ObjTre.winui5IteConBas-siz-MD,
+   .sapUiMedia-Std-Phone .winui5ObjTre.winui5IteConBas-sizPho-MD,
+   .sapUiMedia-Std-Tablet .winui5ObjTre.winui5IteConBas-sizTab-MD,
+   .sapUiMedia-Std-Desktop .winui5ObjTre.winui5IteConBas-sizDes-MD{
+        
+   }
+   
+   
+   
+/*
+* XS Items
+*/
+.winui5ObjLis-viewMode-SmallTiles,
+.winui5ObjLis-viewMode-SmallItems,
+.winui5ObjLis-viewMode-Details,
+.winui5ObjTre-viewMode-SmallItems{ 
+    .winui5Item-item{
+		height:@winui5-refXS;
+	}
+	
+	.winui5Item-expandIcon{
+        font-size: @winui5-fonXS;
+        
+        height:@winui5-refXS;
+        line-height:@winui5-refXS;
+    }
+	
+	.winui5Item-itemContent{
+	    //-itemContent without checkbox
+	    padding:0 @winui5-spaXS;
+	}
+	
+	&.winui5IteConBas-flg-Checkbox{ 
+        .winui5Item-itemContent{
+            //-itemContent with checkbox
+            padding-left: (@winui5-cheBoxSiz + 2*@winui5-spaXS);
+        }
+    }
+	
+	.winui5Item-checkbox{
+	    position:absolute;
+	    left:0;
+	    top:0;
+		width: (@winui5-cheBoxSiz + 2*@winui5-spaXS);
+		height: @winui5-refInnXS;
+	}
+	
+	.winui5Item-checkboxFrame{
+	    position:absolute;
+	    height: @winui5-cheBoxSiz;
+        width: @winui5-cheBoxSiz;
+		left: @winui5-spaXS;
+		top: (0.5 * (@winui5-refInnXS - @winui5-cheBoxSiz));
+	}
+	
+	.winui5Item-checkboxMark{
+	   font-size: @winui5-cheBoxFon;
+       line-height: (@winui5-cheBoxSiz - 2 * @winui5-cheBoxBor);
+	}
+}
+
+
+
+/*
+* MD Tiles and Items, XL Icons
+*/
+.winui5ObjLis-viewMode-MediumTiles,
+.winui5ObjLis-viewMode-MediumItems,
+.winui5ObjTre-viewMode-MediumItems,
+.winui5ObjLis-viewMode-MediumIcons,
+.winui5ObjLis-viewMode-LargeIcons{
+    .winui5Item-checkbox{
+        position:absolute;
+        left:0;
+        top:0;
+        height: (@winui5-cheBoxSiz + 2 * @winui5-spaMD);
+        width: (@winui5-cheBoxSiz + 2 * @winui5-spaMD);
+    }
+    
+    .winui5Item-checkboxFrame{
+        position:absolute;
+        height: @winui5-cheBoxSiz;
+        width: @winui5-cheBoxSiz;
+        left: @winui5-spaMD;
+        top: @winui5-spaMD;
+    }
+    
+    .winui5Item-checkboxMark{
+       font-size:@winui5-cheBoxFon;
+       line-height: (@winui5-cheBoxSiz - 2*@winui5-cheBoxBor);
+    }
+}
+
+/*
+* MD Tiles and Items
+*/
+.winui5ObjLis-viewMode-MediumTiles,
+.winui5ObjLis-viewMode-MediumItems,
+.winui5ObjTre-viewMode-MediumItems{ 
+    .winui5Item-item{
+        height: @winui5-refMD;
+    }
+    
+    .winui5Item-expandIcon{
+        height: @winui5-refMD;
+        line-height: @winui5-refMD;
+        
+        font-size:@winui5-fonMD;
+        
+        background-size: @winui5-fonMD;
+    }
+    
+    .winui5Item-itemContent{
+        //-itemContent without icon
+        padding:0 @winui5-spaMD;
+    }
+}
+
+
+
+/*
+* XS Tiles
+*/
+.winui5ObjLis-viewMode-SmallTiles{
+    .winui5Item{
+        width: 180px;
+    }
+}
+
+/*
+* MD Tiles
+*/
+.winui5ObjLis-viewMode-MediumTiles{ 
+    .winui5Item{
+        width: 240px;
+    }
+}
+
+
+
+/*
+* MD Icons
+*/
+.winui5ObjLis-viewMode-MediumIcons{
+    .winui5Item{
+        width: (0.8 * @winui5-refMD + 2 * @winui5-spaMD);
+    }
+    
+    .winui5Item-itemContent{
+        padding: 0 @winui5-spaMD;
+    }
+}
+
+/*
+* XL Icons
+*/
+.winui5ObjLis-viewMode-LargeIcons{
+    .winui5Item{
+        width: (0.8 * @winui5-refXL + 2 * @winui5-spaXL);
+    }
+    
+    .winui5Item-itemContent{
+        padding: 0 @winui5-spaXL;
+    }
+}
+
+
+
+/*
+* START Options
+*/
+.winui5ObjLis-opt-PaddingSM,
+.winui5ObjTre-opt-PaddingSM{
+     & > .winui5IteConBas-items{
+        padding:4px 6px;
+     }
+ }
+/*
+* END Options
+*/

@@ -1,0 +1,299 @@
+<core:FragmentDefinition xmlns="sap.m"
+	xmlns:winui5="pks.winui5" xmlns:core="sap.ui.core">
+	<VBox>
+		<HBox>
+
+			<!-- START ObjectTree: SmallItems, Single -->
+			<VBox class="devVariant">
+				<Text text="SmallItems, Single" />
+				<winui5:ObjectTree id="fileTreeSmallItemsSingleSelection" keyModifiersEnabled="true"
+					selectionChange=".onSelectionChange" press=".onPress" items="{FILES>/files}"
+					selectionMode="Single" viewMode="SmallItems" dragEnabled="true"
+					dropEnabled="true" drop="onDrop" width="280px" height="400px">
+					<winui5:FileItem name="{FILES>fileName}"
+						description="{FILES>fileType}" enabled="{= !${FILES>disabled}}"
+						selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+
+				</winui5:ObjectTree>
+			</VBox>
+			<!-- END ObjectTree: SmallItems, Single -->
+			<!-- START ObjectTree: SmallItems, Multiple -->
+			<VBox class="devVariant">
+				<Text text="SmallItems, Multiple" />
+				<winui5:ObjectTree id="fileTreeSmallItemsMultipleSelection" keyModifiersEnabled="true"
+					selectionChange=".onSelectionChange" press=".onPress" items="{FILES>/files}"
+					selectionMode="Multiple" viewMode="SmallItems" dragEnabled="true"
+					dropEnabled="true" drop="onDrop" width="280px" height="400px">
+					<winui5:FileItem name="{FILES>fileName}"
+						description="{FILES>fileType}" enabled="{= !${FILES>disabled}}"
+						selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+
+				</winui5:ObjectTree>
+			</VBox>
+			<!-- END ObjectTree: SmallItems, Multiple -->
+			<!-- START ObjectTree: MediumItems, Single -->
+			<VBox class="devVariant">
+				<Text text="MediumItems, Single" />
+				<winui5:ObjectTree id="fileTreeMediumItemsSingleSelection" keyModifiersEnabled="true"
+					selectionChange=".onSelectionChange" press=".onPress" items="{FILES>/files}"
+					selectionMode="Single" viewMode="MediumItems" dragEnabled="true"
+					dropEnabled="true" drop="onDrop" width="280px" height="400px">
+					<winui5:FileItem name="{FILES>fileName}"
+						description="{FILES>fileType}" enabled="{= !${FILES>disabled}}"
+						selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+
+				</winui5:ObjectTree>
+			</VBox>
+			<!-- END ObjectTree: MediumItems, Single -->
+			<!-- START ObjectTree: MediumItems, Multiple -->
+			<VBox class="devVariant">
+				<Text text="MediumItems, Multiple" />
+				<winui5:ObjectTree id="fileTreeMediumItemsMultipleSelection" keyModifiersEnabled="true"
+					selectionChange=".onSelectionChange" press=".onPress" items="{FILES>/files}"
+					selectionMode="Multiple" viewMode="MediumItems" dragEnabled="true"
+					dropEnabled="true" drop="onDrop" width="280px" height="400px">
+					<winui5:FileItem name="{FILES>fileName}"
+						description="{FILES>fileType}" enabled="{= !${FILES>disabled}}"
+						selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+
+				</winui5:ObjectTree>
+			</VBox>
+			<!-- END ObjectTree: MediumItems, Multiple -->
+
+		</HBox>
+
+		<HBox>
+			<!-- START ObjectList: SmallTiles, Single -->
+			<VBox class="devVariant">
+				<Text text="SmallTiles, Single / Select" />
+				<winui5:ObjectList id="fileGridSmallTilesSingleSelection" keyModifiersEnabled="true"
+					selectionChange=".onSelectionChange" press=".onPress" viewMode="SmallTiles"
+					items="{FILES>/files/0/children}" selectionMode="Single" dragEnabled="true"
+					dropEnabled="true" drop="onDrop" width="540px" height="220px">
+					<winui5:FileItem name="{FILES>fileName}"
+						description="{FILES>fileType}" enabled="{= !${FILES>disabled}}"
+						selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+					<!-- icon="{ path : 'FILES>fileType', formatter : 'ui5maker.MakerMain.formatTypeIcon' 
+						}" -->
+				</winui5:ObjectList>
+			</VBox>
+			<!-- END ObjectList: SmallTiles, Single -->
+			<!-- START ObjectList: SmallTiles, Multiple -->
+			<VBox class="devVariant">
+				<Text text="SmallTiles, Multiple / Select" />
+				<winui5:ObjectList id="fileGridSmallTilesMultipleSelection" keyModifiersEnabled="true"
+					selectionChange=".onSelectionChange" press=".onPress" viewMode="SmallTiles"
+					items="{FILES>/files/0/children}" selectionMode="Multiple"
+					dragEnabled="true" dropEnabled="true" drop="onDrop" width="512px"
+					height="220px">
+					<winui5:FileItem name="{FILES>fileName}"
+						description="{FILES>fileType}" enabled="{= !${FILES>disabled}}"
+						selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+					<!-- icon="{ path : 'FILES>fileType', formatter : 'ui5maker.MakerMain.formatTypeIcon' 
+						}" -->
+				</winui5:ObjectList>
+			</VBox>
+			<!-- END ObjectList: SmallTiles, Multiple -->
+		</HBox>
+
+		<HBox>
+			<!-- START ObjectList: MediumTiles, Single -->
+			<VBox class="devVariant">
+				<Text text="MediumTiles, Single / Toggle" />
+				<winui5:ObjectList id="fileGridMediumTilesSingleSelection" keyModifiersEnabled="true"
+					selectionChange=".onSelectionChange" press=".onPress" viewMode="MediumTiles"
+					items="{FILES>/files/0/children}" selectionMode="Single" dragEnabled="true" activateAction="Toggle"
+					dropEnabled="true" drop="onDrop" width="512px" height="220px">
+					<winui5:FileItem name="{FILES>fileName}"
+						description="{FILES>fileType}" enabled="{= !${FILES>disabled}}"
+						selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+					<!-- icon="{ path : 'FILES>fileType', formatter : 'ui5maker.MakerMain.formatTypeIcon' 
+						}" -->
+				</winui5:ObjectList>
+			</VBox>
+			<!-- END ObjectList: MediumTiles, Single -->
+			<!-- START ObjectList: MediumTiles, Multiple -->
+			<VBox class="devVariant">
+				<Text text="MediumTiles, Multiple / Toggle" />
+				<winui5:ObjectList id="fileGridMediumTilesMultipleSelection" keyModifiersEnabled="true"
+					selectionChange=".onSelectionChange" press=".onPress" viewMode="MediumTiles"
+					items="{FILES>/files/0/children}" selectionMode="Multiple" activateAction="Toggle"
+					dragEnabled="true" dropEnabled="true" drop="onDrop" width="512px" checkboxVisibility="Hover"
+					height="220px">
+					<winui5:FileItem name="{FILES>fileName}"
+						description="{FILES>fileType}" enabled="{= !${FILES>disabled}}"
+						selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+					<!-- icon="{ path : 'FILES>fileType', formatter : 'ui5maker.MakerMain.formatTypeIcon' 
+						}" -->
+				</winui5:ObjectList>
+			</VBox>
+			<!-- END ObjectList: MediumTiles, Multiple -->
+		</HBox>
+
+		<HBox>
+			<!-- START ObjectList: MediumIcons, Single -->
+			<VBox class="devVariant">
+				<Text text="MediumIcons, Single / None" />
+				<winui5:ObjectList id="fileGridMediumIconsSingleSelection" keyModifiersEnabled="true"
+					selectionChange=".onSelectionChange" press=".onPress" viewMode="MediumIcons"
+					items="{FILES>/files/0/children}" selectionMode="Single" dragEnabled="true" activateAction="None"
+					dropEnabled="true" drop="onDrop" width="384px" height="220px">
+					<winui5:FileItem name="{FILES>fileName}"
+						description="{FILES>fileType}" enabled="{= !${FILES>disabled}}"
+						selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+					<!-- icon="{ path : 'FILES>fileType', formatter : 'ui5maker.MakerMain.formatTypeIcon' 
+						}" -->
+				</winui5:ObjectList>
+			</VBox>
+			<!-- END ObjectList: MediumIcons, Single -->
+			<!-- START ObjectList: MediumIcons, Multiple -->
+			<VBox class="devVariant">
+				<Text text="MediumIcons, Multiple / None" />
+				<winui5:ObjectList id="fileGridMediumIconsMultipleSelection" keyModifiersEnabled="true"
+					selectionChange=".onSelectionChange" press=".onPress" viewMode="MediumIcons"
+					items="{FILES>/files/0/children}" selectionMode="Multiple" activateAction="None"
+					dragEnabled="true" dropEnabled="true" drop="onDrop" width="384px"
+					height="220px">
+					<winui5:FileItem name="{FILES>fileName}"
+						description="{FILES>fileType}" enabled="{= !${FILES>disabled}}"
+						selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+					<!-- icon="{ path : 'FILES>fileType', formatter : 'ui5maker.MakerMain.formatTypeIcon' 
+						}" -->
+				</winui5:ObjectList>
+			</VBox>
+			<!-- END ObjectList: MediumIcons, Multiple -->
+		</HBox>
+		<HBox>
+			<!-- START ObjectList: LargeIcons, Single -->
+			<VBox class="devVariant">
+				<Text text="LargeIcons, Single" />
+				<winui5:ObjectList id="fileGridLargeIconsSingleSelection" keyModifiersEnabled="true"
+					selectionChange=".onSelectionChange" press=".onPress" viewMode="LargeIcons"
+					items="{FILES>/files/0/children}" selectionMode="Single" dragEnabled="true"
+					dropEnabled="true" drop="onDrop" width="384px" height="220px">
+					<winui5:FileItem name="{FILES>fileName}"
+						description="{FILES>fileType}" enabled="{= !${FILES>disabled}}"
+						selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+					<!-- icon="{ path : 'FILES>fileType', formatter : 'ui5maker.MakerMain.formatTypeIcon' 
+						}" -->
+				</winui5:ObjectList>
+			</VBox>
+			<!-- END ObjectList: LargeIcons, Single -->
+			<!-- START ObjectList: LargeIcons, Multiple -->
+			<VBox class="devVariant">
+				<Text text="LargeIcons, Multiple" />
+				<winui5:ObjectList id="fileGridLargeIconsMultipleSelection" keyModifiersEnabled="true"
+					selectionChange=".onSelectionChange" press=".onPress" viewMode="LargeIcons"
+					items="{FILES>/files/0/children}" selectionMode="Multiple"
+					dragEnabled="true" dropEnabled="true" drop="onDrop" width="384px" height="200px"
+					class="withPadding">
+					<winui5:FileItem name="{FILES>fileName}"
+						description="{FILES>fileType}" enabled="{= !${FILES>disabled}}"
+						selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+					<!-- icon="{ path : 'FILES>fileType', formatter : 'ui5maker.MakerMain.formatTypeIcon' 
+						}" -->
+				</winui5:ObjectList>
+			</VBox>
+			<!-- END ObjectList: LargeIcons, Multiple -->
+		</HBox>
+		<HBox>
+			<!-- START ObjectList: SmallItems, Single -->
+			<VBox class="devVariant">
+				<Text text="SmallItems, Single" />
+				<winui5:ObjectList id="fileGridSmallItemsSingleSelection" keyModifiersEnabled="true"
+					selectionChange=".onSelectionChange" press=".onPress" viewMode="SmallItems"
+					items="{FILES>/files/0/children}" selectionMode="Single" dragEnabled="true"
+					dropEnabled="true" drop="onDrop" width="384px" height="280px">
+					<winui5:FileItem name="{FILES>fileName}"
+						description="{FILES>fileType}" enabled="{= !${FILES>disabled}}"
+						selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+					<!-- icon="{ path : 'FILES>fileType', formatter : 'ui5maker.MakerMain.formatTypeIcon' 
+						}" -->
+				</winui5:ObjectList>
+			</VBox>
+			<!-- END ObjectList: SmallItems, Single -->
+			<!-- START ObjectList: SmmallList, Multiple -->
+			<VBox class="devVariant">
+				<Text text="SmallItems, Multiple" />
+				<winui5:ObjectList id="fileGridSmallItemsMultipleSelection" keyModifiersEnabled="true"
+					selectionChange=".onSelectionChange" press=".onPress" viewMode="SmallItems"
+					items="{FILES>/files/0/children}" selectionMode="Multiple"
+					dragEnabled="true" dropEnabled="true" drop="onDrop" width="384px"
+					height="280px">
+					<winui5:FileItem name="{FILES>fileName}"
+						description="{FILES>fileType}" enabled="{= !${FILES>disabled}}"
+						selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+					<!-- icon="{ path : 'FILES>fileType', formatter : 'ui5maker.MakerMain.formatTypeIcon' 
+						}" -->
+				</winui5:ObjectList>
+			</VBox>
+			<!-- END ObjectList: SmallItems, Multiple -->
+		</HBox>
+		<HBox>
+			<!-- START ObjectList: MediumItems, Single -->
+			<VBox class="devVariant">
+				<Text text="MediumItems, Single" />
+				<winui5:ObjectList id="fileGridMediumItemsSingleSelection" keyModifiersEnabled="true"
+					selectionChange=".onSelectionChange" press=".onPress" viewMode="MediumItems"
+					items="{FILES>/files/0/children}" selectionMode="Single" dragEnabled="true"
+					dropEnabled="true" drop="onDrop" width="384px" height="280px">
+					<winui5:FileItem name="{FILES>fileName}"
+						description="{FILES>fileType}" enabled="{= !${FILES>disabled}}"
+						selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+					<!-- icon="{ path : 'FILES>fileType', formatter : 'ui5maker.MakerMain.formatTypeIcon' 
+						}" -->
+				</winui5:ObjectList>
+			</VBox>
+			<!-- END ObjectList: MediumItems, Single -->
+			<!-- START ObjectList: MediumItems, Multiple -->
+			<VBox class="devVariant">
+				<Text text="MediumItems, Multiple" />
+				<winui5:ObjectList id="fileGridMediumItemsMultipleSelection" keyModifiersEnabled="true"
+					selectionChange=".onSelectionChange" press=".onPress" viewMode="MediumItems"
+					items="{FILES>/files/0/children}" selectionMode="Multiple"
+					dragEnabled="true" dropEnabled="true" drop="onDrop" width="384px"
+					height="280px">
+					<winui5:FileItem name="{FILES>fileName}"
+						description="{FILES>fileType}" enabled="{= !${FILES>disabled}}"
+						selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+					<!-- icon="{ path : 'FILES>fileType', formatter : 'ui5maker.MakerMain.formatTypeIcon' 
+						}" -->
+				</winui5:ObjectList>
+			</VBox>
+			<!-- END ObjectList: MediumItems, Multiple -->
+		</HBox>
+        <HBox>
+            <!-- START ObjectList: Details, Single -->
+            <VBox class="devVariant">
+                <Text text="Details, Single" />
+                <winui5:ObjectList id="fileGridDetailsSingleSelection" keyModifiersEnabled="true"
+                    selectionChange=".onSelectionChange" press=".onPress" viewMode="Details"
+                    items="{FILES>/files/0/children}" selectionMode="Single" dragEnabled="true"
+                    dropEnabled="true" drop="onDrop" width="480px" height="280px">
+                    <winui5:FileItem name="{FILES>fileName}" value="{FILES>fileSize}"
+                        description="{FILES>fileType}" valueDate="{FILES>fileModified}" enabled="{= !${FILES>disabled}}"
+                        selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+                    <!-- icon="{ path : 'FILES>fileType', formatter : 'ui5maker.MakerMain.formatTypeIcon' 
+                        }" -->
+                </winui5:ObjectList>
+            </VBox>
+            <!-- END ObjectList: Details, Single -->
+            <!-- START ObjectList: Details, Multiple -->
+            <VBox class="devVariant">
+                <Text text="Details, Multiple" />
+                <winui5:ObjectList id="fileGridDetailsMultipleSelection" keyModifiersEnabled="true"
+                    selectionChange=".onSelectionChange" press=".onPress" viewMode="Details"
+                    items="{FILES>/files/0/children}" selectionMode="Multiple"
+                    dragEnabled="true" dropEnabled="true" drop="onDrop" width="480px"
+                    height="280px">
+                    <winui5:FileItem name="{FILES>fileName}"
+                        description="{FILES>fileType}" valueDate="{FILES>fileModified}" value="{FILES>fileSize}" enabled="{= !${FILES>disabled}}"
+                        selectable="{= !${FILES>unselectable}}"></winui5:FileItem>
+                    <!-- icon="{ path : 'FILES>fileType', formatter : 'ui5maker.MakerMain.formatTypeIcon' 
+                        }" -->
+                </winui5:ObjectList>
+            </VBox>
+            <!-- END ObjectList: Details, Multiple -->
+        </HBox>
+	</VBox>
+</core:FragmentDefinition>

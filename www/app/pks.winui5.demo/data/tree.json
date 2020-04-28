@@ -1,0 +1,226 @@
+{
+    "files": [{
+            "fileName": "template",
+            "icon" : "folder_vertical_open.png",
+            "selected" : true,
+            "children": [{
+                "fileName": "action",
+                "icon": "folder_brick.png",
+                "children": [{
+                    "fileName": "NavigateToAbout.action.json",
+                    "fileType": "Action",
+                    "icon" : "gear_in.png",
+                    "children": []
+                }, {
+                    "fileName": "NavigateToHome.action.json",
+                    "fileType": "Action",
+                    "icon" : "gear_in.png",
+                    "children": []
+                }, {
+                    "fileName": "NavigateViaMenuRoot.action.json",
+                    "fileType": "Action",
+                    "icon" : "gear_in.png",
+                    "children": []
+                }, {
+                    "fileName": "SetSelectedMenuRoot.action.json",
+                    "fileType": "Action",
+                    "icon" : "gear_in.png",
+                    "children": []
+                }, {
+                    "fileName": "ToggleBarMenuRoot.action.json",
+                    "fileType": "Action",
+                    "icon" : "gear_in.png",
+                    "children": []
+                }]
+            }, {
+                "fileName": "css",
+                "icon": "folder_palette.png",
+                "children": [{
+                    "fileName": "app.css",
+                    "fileType": "Stylesheet",
+                    "icon" : "palette.png",
+                    "children": []
+                }]
+            }, {
+                "fileName": "i18n",
+                "icon": "folder_table.png",
+                "children": [{
+                    "fileName": "i18n.properties",
+                    "fileType": "Properties",
+                    "icon" : "preferences.png",
+                    "children": []
+                }, {
+                    "fileName": "i18n_de.properties",
+                    "fileType": "Properties",
+                    "icon" : "preferences.png",
+                    "children": []
+                }, {
+                    "fileName": "i18n_de_DE.properties",
+                    "fileType": "Properties",
+                    "icon" : "preferences.png",
+                    "children": []
+                }, {
+                    "fileName": "i18n_en.properties",
+                    "fileType": "Properties",
+                    "icon" : "preferences.png",
+                    "children": []
+                }, {
+                    "fileName": "i18n_en_US.properties",
+                    "fileType": "Properties",
+                    "icon" : "preferences.png",
+                    "children": []
+                }]
+            }, {
+                "fileName": "img",
+                "icon": "folder_picture.png",
+                "children": [{
+                    "fileName": "awesome.png",
+                    "fileType": "PNG Image",
+                    "icon" : "picture.png",
+                    "children": []
+                }, {
+                    "fileName": "tiny-grid-bg.jpg",
+                    "fileType": "JPEG Image",
+                    "icon" : "picture.png",
+                    "children": []
+                }, {
+                    "fileName": "ui5strap-logo-256.png",
+                    "fileType": "PNG Image",
+                    "icon" : "picture.png",
+                    "children": []
+                }, {
+                    "fileName": "ui5strap-template-icon.jpg",
+                    "fileType": "JPEG Image",
+                    "icon" : "picture.png",
+                    "children": []
+                }]
+            }, {
+                "fileName": "view",
+                "icon": "folder_page_white.png",
+                "children": [{
+                    "fileName": "About.view.xml",
+                    "fileType": "XML View",
+                    "icon" : "page_white_code_red.png",
+                    "children": []
+                }, {
+                    "fileName": "Home.view.xml",
+                    "fileType": "XML View",
+                    "icon" : "page_white_code_red.png",
+                    "children": []
+                }, {
+                    "fileName": "MenuRoot.view.xml",
+                    "fileType": "XML View",
+                    "icon" : "page_white_code_red.png",
+                    "children": []
+                }]
+            }, {
+                "fileName": "app.json",
+                "fileType": "App Configuration",
+                "icon" : "interface_preferences.png",
+                "children": []
+            }, {
+                "fileName": "index.html",
+                "fileType": "Index File",
+                "icon" : "application.png",
+                "children": []
+            }]
+        },
+        
+        {
+            "fileName": "helloworld",
+            "icon" : "folder_vertical_open.png",
+            "children": [{
+                "fileName": "controller",
+                "icon" : "folder_page.png",
+                "children": [{
+                    "fileName": "Startpage.controller.js",
+                    "fileType": "Controller",
+                    "icon" : "script_gear.png",
+                    "children": []
+                }, {
+                    "fileName": "Menu.controller.js",
+                    "fileType": "Controller",
+                    "icon" : "script_gear.png",
+                    "children": []
+                }]
+            }, {
+                "fileName": "css",
+                "icon": "folder_palette.png",
+                "children": [{
+                    "fileName": "app.css",
+                    "fileType": "Stylesheet",
+                    "icon" : "palette.png",
+                    "children": []
+                }]
+            }, {
+                "fileName": "i18n",
+                "icon": "folder_table.png",
+                "children": [{
+                    "fileName": "i18n.properties",
+                    "fileType": "Properties",
+                    "icon" : "preferences.png",
+                    "children": []
+                }, {
+                    "fileName": "i18n_de.properties",
+                    "fileType": "Properties",
+                    "icon" : "preferences.png",
+                    "children": []
+                }, {
+                    "fileName": "i18n_de_DE.properties",
+                    "fileType": "Properties",
+                    "icon" : "preferences.png",
+                    "children": []
+                }, {
+                    "fileName": "i18n_en.properties",
+                    "fileType": "Properties",
+                    "icon" : "preferences.png",
+                    "children": []
+                }, {
+                    "fileName": "i18n_en_US.properties",
+                    "fileType": "Properties",
+                    "icon" : "preferences.png",
+                    "children": []
+                }]
+            }, {
+                "fileName": "img",
+                "icon": "folder_picture.png",
+                "children": [{
+                    "fileName": "test.png",
+                    "fileType": "PNG Image",
+                    "icon" : "picture.png",
+                    "children": []
+                }, {
+                    "fileName": "my-image.jpg",
+                    "fileType": "JPEG Image",
+                    "icon" : "picture.png",
+                    "children": []
+                }, {
+                    "fileName": "filex-logo.png",
+                    "fileType": "PNG Image",
+                    "icon" : "picture.png",
+                    "children": []
+                }]
+            }, {
+                "fileName": "view",
+                "icon": "folder_page_white.png",
+                "children": [{
+                    "fileName": "Startpage.view.xml",
+                    "fileType": "XML View",
+                    "icon" : "page_white_code_red.png",
+                    "children": []
+                }, {
+                    "fileName": "Menu.view.xml",
+                    "fileType": "XML View",
+                    "icon" : "page_white_code_red.png",
+                    "children": []
+                }]
+            }, {
+                "fileName": "index.html",
+                "fileType": "Index File",
+                "icon" : "application.png",
+                "children": []
+            }]
+        }
+        ]
+    
+}

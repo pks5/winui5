@@ -1,0 +1,22 @@
+{
+  "name": "winui5-build-lib",
+  "version": "1.0.8-SNAPSHOT",
+  "author": "Jan Philipp Knoeller",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-cli": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-compress": "*",
+    "grunt-openui5": "*",
+    "grunt-jsdoc": "*"
+  },
+  "ui5prod": {
+    "productName": "winui5",
+    "libraryName": "pks.winui5",
+    "productVersion": "1.0.8-SNAPSHOT",
+    "targetProject": "pksoftware.de"
+  }
+}

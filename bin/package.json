@@ -1,0 +1,26 @@
+{
+  "name": "winui5-bin",
+  "version": "1.0.8-SNAPSHOT",
+  "author": "Jan Philipp Knoeller",
+  "scripts": {
+    "run-web": "node ../server/server.js",
+    "run-desktop": "electron ../www/app/pks.winui5.demo/",
+    "build-themes": "grunt --gruntfile ../build/pks.winui5/ui5prod-themes.js",
+    "clean-library": "grunt cleanup --gruntfile ../build/pks.winui5/ui5prod-library.js",
+    "build-library": "grunt --gruntfile ../build/pks.winui5/ui5prod-library.js",
+    "clean-docs": "grunt cleanup --gruntfile ../build/pks.winui5/ui5prod-docs.js",
+    "build-docs": "grunt --gruntfile ../build/pks.winui5/ui5prod-docs.js"
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-cli": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-openui5": "*",
+    "http-server": "*",
+    "jsdoc": "*",
+    "ink-docstrap": "*",
+    "electron": "^5.0.7",
+    "electron-builder": "^21.2.0"
+  }
+}

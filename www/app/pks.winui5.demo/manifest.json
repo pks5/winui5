@@ -1,0 +1,100 @@
+{
+  "_version": "1.1.0",
+  "sap.app": {
+    "_version": "1.1.0",
+    "id": "pks.winui5.demo.fiori",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "applicationVersion": {
+      "version": "1.0.0"
+    }
+  },
+  "sap.ui": {
+    "_version": "1.1.0",
+    "technology": "UI5",
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    },
+    "supportedThemes": [
+      "sap_bluecrystal"
+    ]
+  },
+  "sap.ui5": {
+    "_version": "1.1.0",
+    "rootView": "pks.winui5.demo.fiori.view.App",
+    "dependencies": {
+      "minUI5Version": "1.30",
+      "libs": {
+        "sap.m": {}
+      }
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "pks.winui5.demo.fiori.i18n.i18n"
+        }
+      },
+      "FILES": {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "data/tree.json"
+      }
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "pks.winui5.demo.fiori.view",
+        "controlId": "app",
+        "controlAggregation": "pages"
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "overview",
+          "target": "overview"
+        },
+        {
+          "pattern": "detail/selection-modes",
+          "name": "selectionModes",
+          "target": "selectionModes"
+        },
+        {
+          "pattern": "detail/item-tree",
+          "name": "itemTree",
+          "target": "itemTree"
+        },
+        {
+          "pattern": "detail/fileExplorer",
+          "name": "fileExplorer",
+          "target": "fileExplorer"
+        }
+      ],
+      "targets": {
+        "overview": {
+          "viewName": "Overview"
+        },
+        "selectionModes": {
+          "viewName": "SelectionModes"
+        },
+        "itemTree": {
+          "viewName": "ItemTree"
+        },
+        "fileExplorer": {
+          "viewName": "FileExplorer"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    }
+  }
+}

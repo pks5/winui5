@@ -1,0 +1,23 @@
+.winui5FleLay{
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.winui5FleLay-ori-Horizontal{
+    align-items: flex-start;
+ }
+ 
+.winui5FleLay-ori-Vertical{
+    flex-direction : column;
+    
+    & > .winui5FleLayIte:only-child{
+        height: 100%;
+        flex: 0 0 100%;
+    }
+ }
+
+ .winui5FleLayIte{
+     position:relative;
+ }

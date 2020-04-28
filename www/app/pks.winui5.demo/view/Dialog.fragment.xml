@@ -1,0 +1,13 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:winui5="pks.winui5" xmlns:core="sap.ui.core">
+    
+    <winui5:Overlay>
+        <winui5:Dialog sizePhone="XS">
+            <winui5:buttons>
+	            <winui5:Button sizePhone="XS" sizeTablet="SM" icon="sap-icon://accept" text="OK"></winui5:Button>
+	            <winui5:Button text="Cancel" press=".onDialogCancel"></winui5:Button>
+            </winui5:buttons>
+        </winui5:Dialog>
+    </winui5:Overlay>
+    
+</core:FragmentDefinition>

@@ -1,0 +1,109 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>de.pksoftware</groupId>
+	<artifactId>de.pksoftware.winui5</artifactId>
+	<version>1.0.9-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>WinUi5 Library</name>
+
+	<organization>
+		<name>PKSoftware - Jan Philipp Knoeller</name>
+		<url>http://pksoftware.de</url>
+	</organization>
+
+	<licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+	<developers>
+		<developer>
+			<name>Jan Philipp Knoeller</name>
+			<email>info@pksoftware.de</email>
+			<timezone>-1</timezone>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<!-- Java Min Version -->
+		<java.min.version>1.8</java.min.version>
+
+		<!-- Maven Compiler -->
+		<maven.compiler.version>3.1</maven.compiler.version>
+    </properties>
+
+	<dependencies>
+
+		
+	</dependencies>
+
+
+	<!-- Build -->
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/web</directory>
+			</resource>
+		</resources>
+		<plugins>
+
+            <!-- Create Library Jar -->
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>2.6</version>
+				<executions>
+					<execution>
+						<id>copy-resources</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.outputDirectory}/META-INF/resources/webjars/${project.artifactId}/${project.version}/</outputDirectory>
+							<includeEmptyDirs>true</includeEmptyDirs>
+							<resources>
+								<resource>
+									<directory>${basedir}/www/lib/</directory>
+									<filtering>false</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- Maven Compiler Plugin -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.version}</version>
+				<configuration>
+					<source>${java.min.version}</source>
+					<target>${java.min.version}</target>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-jar-plugin</artifactId>
+              <version>2.3.1</version>
+              <configuration>
+                  <archive>
+                      <manifest>
+                          <mainClass>com.ui5os.containerdesktop.Main</mainClass>
+                      </manifest>
+                  </archive>
+              </configuration>
+          </plugin>
+
+		</plugins>
+	</build>
+</project>

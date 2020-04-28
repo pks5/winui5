@@ -1,0 +1,13 @@
+<mvc:View controllerName="pks.winui5.demo.fiori.controller.SelectionModes" xmlns="sap.m"
+	xmlns:winui5="pks.winui5" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core">
+	<Page title="{i18n>selectionModesHeading}">
+		<headerContent>
+
+		</headerContent>
+		<content>
+			
+			<core:Fragment fragmentName="pks.winui5.demo.fiori.view.AllTypes" type="XML" />
+			
+		</content>
+	</Page>
+</mvc:View>

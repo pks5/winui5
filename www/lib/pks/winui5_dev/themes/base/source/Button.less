@@ -1,0 +1,99 @@
+/*
+* START Layout
+*/
+
+.winui5But-icon{
+    display:inline-block;
+    vertical-align:top;
+    
+    text-align:center;
+}
+
+.winui5But-text{
+    display:inline-block;
+    vertical-align:top;
+}
+
+.winui5But-icon:first-child,
+.winui5But-text:first-child{
+    margin-left:0;
+}
+
+.winui5But:focus{
+    outline:none;
+    
+}
+
+.winui5But::-moz-focus-inner {
+  border: 0;
+}
+
+/*
+* END Layout
+*/
+
+/*
+* START Sizes
+*/
+
+.winui5But_size(@buttonSize){
+    @ref: "winui5-ref@{buttonSize}";
+    @spa: "winui5-spa@{buttonSize}";
+    @fon: "winui5-fon@{buttonSize}";
+    
+    .winui5ButBas-siz-@{buttonSize},
+    .sapUiMedia-Std-Phone .winui5ButBas-sizPho-@{buttonSize},
+    .sapUiMedia-Std-Tablet .winui5ButBas-sizTab-@{buttonSize},
+    .sapUiMedia-Std-Desktop .winui5ButBas-sizDes-@{buttonSize}{
+        .winui5But-icon{
+            line-height: @@ref - 2 * @winui5But-borSiz;
+            font-size: 1.2 * @@fon;
+            margin-left: @@spa;
+        }
+        
+        .winui5But-text{
+            line-height: @@ref - 2 * @winui5But-borSiz;
+            margin-left: @@spa;
+        }
+    }
+    
+}
+
+.winui5But_size(~"XS");
+.winui5But_size(~"SM");
+.winui5But_size(~"MD");
+.winui5But_size(~"LG");
+.winui5But_size(~"XL");
+
+
+/*
+* END Sizes
+*/
+
+/*
+* START Device Specific
+*/
+
+//Desktop
+.sap-desktop{
+    .winui5But:hover,
+    .winui5But:focus{
+        border-color: @winui5But-colHovBor;
+    }
+}
+
+/*
+* END Device Specific
+*/
+
+/*
+* START Options
+*/
+
+.winui5But-opt-Transparent{
+    background-color: transparent;
+}
+
+/*
+* END Options
+*/

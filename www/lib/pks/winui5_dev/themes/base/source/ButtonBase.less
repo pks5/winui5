@@ -1,0 +1,56 @@
+/*
+* START Base Style
+*/
+.winui5ButBas{
+    display: inline-block;
+    text-align: center;
+    vertical-align: bottom;
+    box-sizing: border-box;
+}
+
+/*
+* END Base Style
+*/
+
+/*
+* START Colors
+*/
+
+.winui5ButBas{
+    background-color: @winui5But-colDef;
+    border:solid @winui5But-borSiz transparent;
+}
+
+/*
+* END Colors
+*/
+
+/*
+* START Sizes
+*/
+
+.winui5ButBas_size(@buttonSize){
+    @ref: "winui5-ref@{buttonSize}";
+    @spa: "winui5-spa@{buttonSize}";
+    @fon: "winui5-fon@{buttonSize}";
+    
+    .winui5ButBas-siz-@{buttonSize},
+    .sapUiMedia-Std-Phone .winui5ButBas-sizPho-@{buttonSize},
+    .sapUiMedia-Std-Tablet .winui5ButBas-sizTab-@{buttonSize},
+    .sapUiMedia-Std-Desktop .winui5ButBas-sizDes-@{buttonSize}{
+        height: @@ref;
+        padding:0 @@spa;
+        font-size: @@fon;
+     }
+}
+
+.winui5ButBas_size(~"XS");
+.winui5ButBas_size(~"SM");
+.winui5ButBas_size(~"MD");
+.winui5ButBas_size(~"LG");
+.winui5ButBas_size(~"XL");
+
+
+/*
+* END Sizes
+*/

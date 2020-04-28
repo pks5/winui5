@@ -1,0 +1,12 @@
+{
+  "name": "winui5-server",
+  "version": "1.0.8-SNAPSHOT",
+  "dependencies": {
+    "body-parser": "*",
+    "ejs": "*",
+    "express": "*",
+    "express-http-proxy": "*",
+    "mysql": "*",
+    "formidable": "*"
+  }
+}

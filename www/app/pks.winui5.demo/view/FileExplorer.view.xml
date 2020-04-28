@@ -1,0 +1,228 @@
+<mvc:View controllerName="pks.winui5.demo.fiori.controller.FileExplorer"
+	xmlns="sap.m" xmlns:winui5="pks.winui5" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+
+	<winui5:SplitContainer orientation="Vertical">
+      <winui5:SplitContainerSegment>
+
+		<winui5:SplitContainer orientation="Vertical">
+			<winui5:SplitContainerSegment size="88px">
+
+					<winui5:ToolBar>
+						<winui5:FlexLayout>
+							<winui5:FlexLayoutItem>
+								<winui5:ButtonMenu id="menuBar"
+									overlayTrigger="SelectionChange" activateAction="Toggle"
+									overlayEnabled="true" selectionMode="Single">
+									<winui5:items>
+										<winui5:ButtonMenuItem text="File">
+											<winui5:overlay>
+												<winui5:Overlay closeMode="ForeignFocus">
+													<winui5:DropdownMenu parentMenu="menuBar"
+														press=".onFileMenuPress">
+														<winui5:DropdownMenuItem text="New"
+															icon="sap-icon://upload" uploadMode="Single" />
+														<winui5:DropdownMenuItem text="Open" />
+														<winui5:DropdownMenuItem text="Save"
+															enabled="false" />
+														<winui5:DropdownMenuItem text="Save all" />
+													</winui5:DropdownMenu>
+												</winui5:Overlay>
+											</winui5:overlay>
+										</winui5:ButtonMenuItem>
+										<winui5:ButtonMenuItem text="Home">
+											<winui5:overlay>
+												<winui5:Overlay closeMode="ForeignFocus">
+													<winui5:DropdownMenu parentMenu="menuBar"
+														press=".onHomeMenuPress">
+														<winui5:DropdownMenuItem text="ABC"
+															selectable="true" />
+														<winui5:DropdownMenuItem text="DEF" />
+														<winui5:DropdownMenuItem text="GHI"
+															enabled="false" />
+
+													</winui5:DropdownMenu>
+												</winui5:Overlay>
+											</winui5:overlay>
+										</winui5:ButtonMenuItem>
+										<winui5:ButtonMenuItem text="Share">
+											<winui5:overlay>
+												<winui5:Overlay closeMode="ForeignFocus">
+													<winui5:DropdownMenu parentMenu="menuBar">
+														<winui5:DropdownMenuItem text="Steve" />
+														<winui5:DropdownMenuItem text="Jenny" />
+														<winui5:DropdownMenuItem text="John"
+															enabled="false" />
+														<winui5:DropdownMenuItem text="Hans" />
+													</winui5:DropdownMenu>
+												</winui5:Overlay>
+											</winui5:overlay>
+										</winui5:ButtonMenuItem>
+										<winui5:ButtonMenuItem text="View" />
+									</winui5:items>
+
+								</winui5:ButtonMenu>
+                            </winui5:FlexLayoutItem>
+                            
+                            <winui5:FlexLayoutItem>
+								<winui5:TextInput></winui5:TextInput>
+							</winui5:FlexLayoutItem>
+
+							<winui5:FlexLayoutItem>
+								<winui5:ButtonMenu id="menuBarTopRight"
+									overlayTrigger="SelectionChange" activateAction="Toggle"
+									overlayEnabled="true" selectionMode="Single">
+									<winui5:ButtonMenuItem text="File"
+										icon="https://freeiconshop.com/wp-content/uploads/edd/calendar-flat-2.png">
+										<winui5:overlay>
+											<winui5:Overlay closeMode="ForeignFocus">
+												<winui5:DropdownMenu parentMenu="menuBar">
+													<winui5:DropdownMenuItem text="ABC"
+														selectable="true" />
+													<winui5:DropdownMenuItem text="DEF" />
+													<winui5:DropdownMenuItem text="GHI"
+														enabled="false" />
+
+												</winui5:DropdownMenu>
+											</winui5:Overlay>
+										</winui5:overlay>
+									</winui5:ButtonMenuItem>
+									<winui5:ButtonMenuItem text="Home"
+										icon="https://ih0.redbubble.net/image.123042426.0619/pp,220x200-pad,220x200,ffffff.u3.jpg">
+										<winui5:overlay>
+											<winui5:Overlay closeMode="ForeignFocus">
+												<winui5:DropdownMenu parentMenu="menuBar">
+													<winui5:DropdownMenuItem text="QX2"
+														selectable="true" />
+													<winui5:DropdownMenuItem text="J4I" />
+													<winui5:DropdownMenuItem text="8UZ"
+														enabled="false" />
+
+												</winui5:DropdownMenu>
+											</winui5:Overlay>
+										</winui5:overlay>
+									</winui5:ButtonMenuItem>
+									<winui5:ButtonMenuItem icon="sap-icon://navigation-down-arrow">
+
+									</winui5:ButtonMenuItem>
+									<winui5:ButtonMenuItem icon="sap-icon://sys-help-2">
+										<winui5:overlay>
+											<winui5:Overlay closeMode="ForeignFocus">
+												<winui5:DropdownMenu parentMenu="menuBar">
+													<winui5:DropdownMenuItem text="4T2"
+														selectable="true" />
+													<winui5:DropdownMenuItem text="8JI" />
+													<winui5:DropdownMenuItem text="2XZ"
+														enabled="false" />
+
+												</winui5:DropdownMenu>
+											</winui5:Overlay>
+										</winui5:overlay>
+									</winui5:ButtonMenuItem>
+								</winui5:ButtonMenu>
+							</winui5:FlexLayoutItem>
+						</winui5:FlexLayout>
+					</winui5:ToolBar>
+
+					<winui5:ToolBar>
+						<winui5:FlexLayout>
+							<winui5:FlexLayoutItem>
+								<winui5:ButtonMenu id="menuNavigation">
+									<winui5:ButtonMenuItem icon="sap-icon://arrow-left" />
+									<winui5:ButtonMenuItem icon="sap-icon://arrow-right" />
+									<winui5:ButtonMenuItem icon="sap-icon://navigation-down-arrow" />
+									<winui5:ButtonMenuItem icon="sap-icon://arrow-top" />
+								</winui5:ButtonMenu>
+							</winui5:FlexLayoutItem>
+
+							<winui5:FlexLayoutItem>
+								<winui5:ButtonMenu id="menuBarBottomRight"
+									press=".onDialogTest">
+									<winui5:ButtonMenuItem icon="sap-icon://upload"
+										uploadMode="Single" />
+									<winui5:ButtonMenuItem
+										icon="https://ih0.redbubble.net/image.123042426.0619/pp,220x200-pad,220x200,ffffff.u3.jpg" />
+									<winui5:ButtonMenuItem icon="sap-icon://refresh" />
+									<winui5:ButtonMenuItem icon="sap-icon://navigation-down-arrow" />
+
+								</winui5:ButtonMenu>
+							</winui5:FlexLayoutItem>
+						</winui5:FlexLayout>
+					</winui5:ToolBar>
+			</winui5:SplitContainerSegment>
+
+				<winui5:SplitContainerSegment>
+
+
+					<winui5:SplitContainer orientation="Horizontal">
+						<winui5:SplitContainerSegment resizable="true" size="300px">
+							<winui5:ToolBar orientation="Vertical">
+								<winui5:ObjectTree id="fileTree" items="{FILES>/files}"
+									height="100%" selectionChange=".onBrowse" options="PaddingMD"
+									dragEnabled="true" dropEnabled="true" drop=".onDrop"
+									selectionMode="Single" overlayTrigger="SecondaryPress">
+									<winui5:FileItem name="{FILES>fileName}"
+										description="{FILES>fileType}" selected="{FILES>selected}" />
+								</winui5:ObjectTree>
+							</winui5:ToolBar>
+						</winui5:SplitContainerSegment>
+						<winui5:SplitContainerSegment resizable="true">
+							<winui5:ObjectList id="fileList" height="100%"
+								dragEnabled="true" itemsChange=".onItemsChange" selectionChange=".onUpdateSelection"
+								options="PaddingSM" items="{FILES>/files}" dropEnabled="true"
+								keyModifiersEnabled="true" drop=".onDrop" selectionMode="Multiple"
+								viewMode="LargeIcons" mouseSelectionEnabled="true" press=".onPress"
+								doublePress=".onBrowse" overlayTrigger="SecondaryPress"
+								overlayEnabled="true" secondaryPressEnabled="true">
+								<winui5:items>
+									<winui5:FileItem name="{FILES>fileName}"
+										description="{FILES>fileType}" value="{FILES>fileSize}"
+										selected="{FILES>selected}" />
+								</winui5:items>
+								<winui5:overlay>
+									<winui5:Overlay closeMode="FocusLoose"
+										beforeOpen=".onBeforeMenuOpen">
+										<winui5:DropdownMenu selectionChange=".onMenuSelectionChange" size="SM">
+
+										</winui5:DropdownMenu>
+									</winui5:Overlay>
+								</winui5:overlay>
+							</winui5:ObjectList>
+						</winui5:SplitContainerSegment>
+						</winui5:SplitContainer>
+				</winui5:SplitContainerSegment>
+		</winui5:SplitContainer>
+      </winui5:SplitContainerSegment>
+	  <winui5:SplitContainerSegment size="44px">
+
+			<winui5:ToolBar>
+				<winui5:FlexLayout>
+					<winui5:FlexLayoutItem>
+						<winui5:ButtonMenu selectionMode="None">
+							<winui5:ButtonMenuItem id="itemsCount" />
+							<winui5:ButtonMenuItem id="selectionCount" />
+							<winui5:ButtonMenuItem id="fileSizeCount" />
+						</winui5:ButtonMenu>
+					</winui5:FlexLayoutItem>
+
+					<winui5:FlexLayoutItem>
+						<winui5:ButtonMenu press=".onChangeViewMode">
+							<winui5:ButtonMenuItem icon="sap-icon://filter-facets"
+								data:viewMode="MediumTiles" />
+							<winui5:ButtonMenuItem icon="sap-icon://menu"
+								data:viewMode="Details" />
+							<winui5:ButtonMenuItem icon="sap-icon://menu2"
+								data:viewMode="MediumItems" />
+							<winui5:ButtonMenuItem icon="sap-icon://grid"
+								data:viewMode="MediumIcons" />
+
+						</winui5:ButtonMenu>
+					</winui5:FlexLayoutItem>
+				</winui5:FlexLayout>
+			</winui5:ToolBar>
+		</winui5:SplitContainerSegment>
+	</winui5:SplitContainer>
+
+
+</mvc:View>

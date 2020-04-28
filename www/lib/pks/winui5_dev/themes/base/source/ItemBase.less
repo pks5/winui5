@@ -1,0 +1,125 @@
+/*
+* Item
+*/
+	
+	.winui5Item{
+		display:block;
+		width:100%;
+		box-sizing: border-box;
+	}
+	
+	.winui5Item-flg-Hidden{
+	   background-color:red;
+	   position:fixed;
+	   right:0;
+	   bottom:0;
+	}
+	
+	.winui5Item-item{
+		position:relative;
+		
+		width: auto;
+        max-width:100%;
+        
+        box-sizing: border-box;
+		
+		text-decoration:none;
+		
+		cursor:default;
+	}
+	
+	.winui5Item-enabled-True > .winui5Item-item{
+	   //cursor:pointer;
+	}
+	
+	//TODO currently expandIcon cannot have display:inline-block
+	.winui5Item-expandIcon{
+	    display:none;
+        position:absolute;
+        
+        left:0;
+        top:0;
+        
+        text-align:center;
+        
+        background-position:center center;
+        background-repeat:no-repeat;
+    }
+    
+    .winui5Item-itemContent{
+	    position:relative;
+        
+        height:100%;
+        box-sizing: border-box;
+        
+        border:@winui5-borSiz solid transparent;
+        
+        overflow:hidden;
+    }
+	
+	.winui5Item-checkbox{
+		display:none;
+		box-sizing: border-box;
+	}
+	
+	.winui5Item-checkboxFrame{
+	    display:block;
+		box-sizing: border-box;
+	}
+	
+	.winui5Item-checkboxMark{
+		display:none;
+		width:100%;
+		height:100%;
+		
+		text-align:center;
+	}
+
+/*
+* START Colors
+*/	
+
+.winui5Item-checkboxFrame{
+   border:solid @winui5-cheBoxBor @winui5Col-cheBoxFro;
+        background-color: @winui5Col-cheBoxBac;
+        color : @winui5Col-cheBoxFro;
+}
+
+/*
+* END Colors
+*/
+	
+	
+	/*
+	* START Disabled & NotSelectable
+	*/
+	
+	.winui5Item-enabled-False > .winui5Item-item{
+		color: @winui5Col-dis;
+	} 
+	
+	.winui5Item-enabled-False > .winui5Item-item .winui5Item-checkbox,
+	.winui5Item-selectable-False > .winui5Item-item .winui5Item-checkbox{
+		display:none!important;
+	} 
+	
+	/*
+	* END Disabled & NotSelectable
+	*/
+	
+	/*
+	* START Selected
+	*/
+	
+	.winui5Item-flg-Selected > .winui5Item-item .winui5Item-checkboxMark{
+		display:block;
+	}
+	
+	/*
+	* END Selected
+	*/
+	
+.sap-desktop{
+    
+   
+}	

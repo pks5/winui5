@@ -1,0 +1,71 @@
+/*
+* Basic style for FileItem controls.
+* Do not put view mode related rules here. Put them into FileItemViewModes.less instead.
+*/
+
+.winui5FileItem > .winui5Item-item{
+    //TODO is this needed?
+    vertical-align: top;
+    display:inline-block;
+}
+
+.winui5FileItem-icon{
+    position:absolute;
+    
+    top:50%;
+    
+    pointer-events: none;
+}
+
+.winui5FileItem-name{
+    display:block;
+    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+.winui5FileItem-description{
+    display: none;
+    box-sizing: border-box;
+    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    pointer-events: none;
+}
+
+.winui5FileItem-flg-WithDescription > .winui5Item-item{
+    .winui5FileItem-description{
+        display: block;
+    }
+}
+
+.winui5FileItem-value,
+.winui5FileItem-valueDate{
+    display: none;
+    
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+.winui5FileItem-description,
+.winui5FileItem-value,
+.winui5FileItem-valueDate{
+    color: @winui5Col-addTex;
+}
+
+.winui5Item-enabled-False > .winui5Item-item .winui5FileItem-description,
+.winui5Item-enabled-False > .winui5Item-item .winui5FileItem-value,
+.winui5Item-enabled-False > .winui5Item-item .winui5FileItem-valueDate{
+    color: @winui5Col-dis;
+}
+ 
+
+
+

@@ -1,0 +1,62 @@
+
+/*
+* ObjectTree
+*/
+
+.winui5ObjTre {
+    overflow-y:auto;
+    overflow-x:auto;
+
+    .winui5Item-items{
+        //TODO margin between items
+	   padding-top:1px;
+	}
+	
+	.winui5Item-items{
+		display:none;
+		height:0px;
+	}
+
+	.winui5Item-flg-Expanded > .winui5Item-items{
+		height:auto;
+		display:block;
+	}
+}
+
+.winui5ObjTre-scrollX-Paginate{
+    overflow-x: hidden;
+        
+    .winui5IteConBas-items{
+        position:relative;
+        
+        -webkit-transition: left 0.1s ease-in-out;
+        -moz-transition: left 0.1s ease-in-out;
+        -o-transition: left 0.1s ease-in-out;
+        -ms-transition: left 0.1s ease-in-out;
+        transition: left 0.1s ease-in-out;
+    }
+        
+   .winui5IteConBas-items,
+   .winui5Item-items{
+        width:100%;
+   }
+}
+
+.winui5ObjTre-scrollX-Scroll .winui5IteConBas-items{
+   position:absolute;
+}
+
+.winui5ObjTre-expandIconVisibility-Hover:hover .winui5Item-expandIcon,
+.winui5IteConBas-expandIconVisibility-Hover:focus .winui5Item-expandIcon{
+    display:block;
+}
+
+.winui5ObjTre-expandIconVisibility-Visible .winui5Item-expandIcon{
+    display:block;
+}
+
+
+
+
+
+

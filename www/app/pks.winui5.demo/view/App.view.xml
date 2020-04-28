@@ -1,0 +1,24 @@
+<mvc:View
+   controllerName="pks.winui5.demo.fiori.controller.App"
+   xmlns="sap.m"
+   xmlns:winui5="pks.winui5" 
+   xmlns:mvc="sap.ui.core.mvc"
+  displayBlock="true"
+    xmlns:data="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+  
+    <winui5:SplitContainer orientation="Vertical">
+      <winui5:SplitContainerSegment size="44px">
+                    <winui5:ToolBar orientation="Vertical" orientationPhone="Horizontal">
+                    <winui5:ButtonMenu id="menuNavigation" press=".onPress">
+                        <winui5:ButtonMenuItem icon="sap-icon://multi-select" text="Selection Modes" data:route="selectionModes" />
+                        <winui5:ButtonMenuItem icon="sap-icon://tree" text="Tree" data:route="itemTree" />
+                        <winui5:ButtonMenuItem icon="sap-icon://folder" text="File Explorer" data:route="fileExplorer" />
+                    </winui5:ButtonMenu>
+                    </winui5:ToolBar>
+      </winui5:SplitContainerSegment>
+      <winui5:SplitContainerSegment>
+            <NavContainer class="nyAppDemoWT" id="app" width="100%" height="100%"/>
+      </winui5:SplitContainerSegment>
+    </winui5:SplitContainer>
+
+</mvc:View>

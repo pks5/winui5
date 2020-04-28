@@ -1,0 +1,72 @@
+.winui5ObjCon{
+    .winui5Item-flg-Selected > .winui5Item-item > .winui5Item-itemContent{
+        background-color: @winui5Col-selNonFoc;
+    }
+}    
+    
+.winui5ObjCon:focus{
+    .winui5Item-flg-Selected > .winui5Item-item > .winui5Item-itemContent{
+        background-color: @winui5Col-selFoc;
+    }
+}
+
+.winui5ObjCon-checkboxVisibility-Visible,
+
+.winui5IteConBas-selectionMode-Multiple.winui5ObjCon-checkboxVisibility-Multiple,
+
+.sap-phone .winui5ObjCon-checkboxVisibility-Touch,
+.sap-tablet .winui5ObjCon-checkboxVisibility-Touch,
+.sap-combi .winui5ObjCon-checkboxVisibility-Touch,
+
+.sap-phone .winui5IteConBas-selectionMode-Multiple.winui5ObjCon-checkboxVisibility-TouchMultiple,
+.sap-tablet .winui5IteConBas-selectionMode-Multiple.winui5ObjCon-checkboxVisibility-TouchMultiple,
+.sap-combi .winui5IteConBas-selectionMode-Multiple.winui5ObjCon-checkboxVisibility-TouchMultiple,
+
+.sap-phone .winui5ObjCon-checkboxVisibility-Hover,
+.sap-tablet .winui5ObjCon-checkboxVisibility-Hover,
+.sap-combi .winui5ObjCon-checkboxVisibility-Hover,
+
+.sap-phone .winui5IteConBas-selectionMode-Multiple.winui5ObjCon-checkboxVisibility-HoverMultiple,
+.sap-tablet .winui5IteConBas-selectionMode-Multiple.winui5ObjCon-checkboxVisibility-HoverMultiple,
+.sap-combi .winui5IteConBas-selectionMode-Multiple.winui5ObjCon-checkboxVisibility-HoverMultiple
+{ 
+    .winui5Item-checkbox{
+       display:block;
+    }
+}
+
+
+
+.sap-desktop .winui5ObjCon-checkboxVisibility-Hover .winui5Item > .winui5Item-item:hover .winui5Item-checkbox,
+.sap-desktop .winui5ObjCon-checkboxVisibility-Hover .winui5Item-flg-Selected > .winui5Item-item .winui5Item-checkbox,
+.sap-desktop .winui5IteConBas-selectionMode-Multiple.winui5ObjCon-checkboxVisibility-HoverMultiple .winui5Item > .winui5Item-item:hover .winui5Item-checkbox,
+.sap-desktop .winui5IteConBas-selectionMode-Multiple.winui5ObjCon-checkboxVisibility-HoverMultiple .winui5Item-flg-Selected > .winui5Item-item .winui5Item-checkbox{
+   display:block;
+}
+
+
+.sap-desktop{
+    .winui5ObjCon{
+        .winui5Item-enabled-True > .winui5Item-item:hover > .winui5Item-itemContent{
+            background-color: @winui5Col-hov;
+        }
+        
+        .winui5Item-flg-Selected.winui5Item-enabled-True > .winui5Item-item:hover > .winui5Item-itemContent{
+            border-color: @winui5Col-act;
+            background-color: @winui5Col-selFoc;
+        }
+        
+        .winui5Item-checkboxFrame:hover{
+            border-color: @winui5Col-cheBoxHov;
+            color : @winui5Col-cheBoxHov;
+        }
+    }   
+     
+    .winui5ObjCon:focus{
+        .winui5Item-flg-Active > .winui5Item-item > .winui5Item-itemContent{
+            border-color: @winui5Col-act;
+        }
+    }
+}
+
+

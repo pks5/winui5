@@ -1,0 +1,22 @@
+html,body,#content,.sapUiView{
+	height:100%;
+}
+
+.devVariant{
+	padding:10px;
+}
+
+.devVariant .sapMText{
+	margin-bottom:10px;
+	font-weight: 500;
+	font-size:16px;
+}
+
+.devVariant .winui5ItemTree,
+.devVariant .winui5ItemList{
+	background-color:rgba(255,255,255,0.7);
+}
+
+.fileExplorer{
+	background-color:white!important;
+}
