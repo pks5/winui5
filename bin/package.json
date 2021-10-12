@@ -20,7 +20,7 @@
     "http-server": "*",
     "jsdoc": "*",
     "ink-docstrap": "*",
-    "electron": "^5.0.7",
+    "electron": "^11.5.0",
     "electron-builder": "^21.2.0"
   }
 }
